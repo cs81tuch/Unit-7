@@ -1,0 +1,60 @@
+// -----  UNIT 7 Assignment
+// -----  Tae Choe, CS81 Spring 2016
+
+/* ---- Ex. 18 What happens when this script is run? ---- */
+var shout = function () {
+    var message = "HEY YOU";
+    alert(message);
+};
+shout();
+alert(message);
+/* ---- Answer:
+ 1) variable shout is excuted once and alert "HEY YOU",
+ 2) shout() is examined and ignored because it doesn't find function declaration,
+ 3) second alert throws error variable meesage is not defined.
+*/
+
+/* ----  Ex. 19 What happends when this script is run? ---- */
+alert("Hello");
+var alert = 2;
+alert("World");
+
+/* --- Answer: 
+1) first line executed 'Hello'
+2) second line throws error 'alert is not a function'
+3) second alert executed World'
+*/
+
+
+/* ---- Ex. 27 write a constructor for movie object ----- */
+var movie = {
+    title: "Alice Through the Looking Glass",
+    mpaa_rating: "PG",
+    directors: "James Bobin",
+    producers: ["Tim Burton", "Joe roth", "Jennifer Todd", " Suzanne Todd"],
+    studios: ["Walt Disney Pictures", "Roth Films", "Team Todd", "Tim Burton Productions", "Legend3D"],
+    release_date: "27 May 2016"
+};
+alert(movie.producers);
+
+/* ---- Ex. 30 Answer oon the build-in object Date --- */
+/* -----a) What the the expression new Date() produce?
+Answer: Writes current day, month, date , year & time hh:mm:ss that is local time zone and appends Greenwich mean time,
+*/
+		new Date();
+// Output:	Sat Jul 16 2016 14:34:28 GMT-0700 (PDT)
+
+/* ---- b) What does the expression new Date(2009, 0, 20) produce?
+Answer: writes new date and time according to parameters passed.
+*/
+		new Date(2009, 0, 20)
+//Output: Tue Jan 20 2009 00:00:00 GMT-0800 (PST)
+
+/* ---- c) If d1 and d2 refer to date objects, what does the express d1.valueOF() - d2.valuOf() produce?
+Answer: If run in shell, returns elapsed time in miliseconds.
+*/
+ var d1 = new Date(2016,5,10);
+ var d2 = new Date(2013,10.5);
+ d1.valueOf() - d2.valueOf();
+// Output; 82252800000
+
